@@ -1,0 +1,800 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Inter", Arial, sans-serif;
+}
+html,
+body,
+#root {
+    height: 100%;
+}
+
+body {
+    background: #f5f7fa;
+    padding-top: 80px;
+    color: #333;
+}
+
+body.auth-page {
+    padding-top: 0 !important;
+    overflow: hidden;
+}
+
+/* HEADER */
+.headerContainer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 70px;
+    background: linear-gradient(90deg, #2874f0, #0053ba);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 40px;
+    z-index: 1000;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+    transition: all 0.3s ease;
+}
+
+.headerContainer:hover {
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.logo:hover {
+    transform: scale(1.05);
+}
+
+.logo img {
+    width: 50px;
+    height: 50px;
+    border-radius: 12px;
+    object-fit: cover;
+}
+
+/* SEARCH BOX */
+.searchBox {
+    display: flex;
+    align-items: center;
+    background: #fff;
+    padding: 10px 18px;
+    border-radius: 10px;
+    width: 420px;
+    border: 1px solid #ddd;
+    box-shadow: inset 0 3px 6px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+}
+
+.searchBox:focus-within {
+    border-color: #2874f0;
+    box-shadow: 0 0 12px rgba(40, 116, 240, 0.3);
+}
+
+.searchBox input {
+    width: 100%;
+    border: none;
+    outline: none;
+    padding-left: 10px;
+    font-size: 15px;
+}
+
+.searchIcon {
+    color: #777;
+}
+
+/* NAV ACTIONS */
+.navActions {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.navActions a {
+    color: white;
+    font-size: 16px;
+    text-decoration: none;
+    position: relative;
+    transition: 0.3s;
+}
+
+.navActions a::after {
+    content: '';
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    bottom: -3px;
+    left: 0;
+    background: #fff;
+    transition: 0.3s;
+}
+
+.navActions a:hover::after {
+    width: 100%;
+}
+
+/* HERO SECTION */
+.hero {
+    display: flex;
+    gap: 30px;
+    background: linear-gradient(145deg, #ffffff, #f1f3f6);
+    padding: 40px;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+    animation: fadeIn 0.6s ease;
+}
+
+.heroLeft h1 {
+    font-size: 36px;
+    margin-bottom: 12px;
+    color: #1a1a1a;
+}
+
+.heroLeft p {
+    font-size: 18px;
+    color: #555;
+    line-height: 1.6;
+}
+
+.heroRight img {
+    width: 400px;
+    height: 220px;
+    border-radius: 15px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.heroRight img:hover {
+    transform: scale(1.05);
+}
+
+/* CATEGORIES */
+.categories {
+    margin-top: 30px;
+}
+
+.catList {
+    display: flex;
+    gap: 15px;
+    margin-top: 15px;
+    overflow-x: auto;
+    padding-bottom: 5px;
+    scrollbar-width: thin;
+    scrollbar-color: #2874f0 transparent;
+}
+
+.catList::-webkit-scrollbar {
+    height: 6px;
+}
+
+.catList::-webkit-scrollbar-thumb {
+    background: #2874f0;
+    border-radius: 3px;
+}
+
+.catItem {
+    background: white;
+    padding: 12px 22px;
+    border-radius: 35px;
+    border: 1px solid #ddd;
+    cursor: pointer;
+    font-size: 15px;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.05);
+}
+
+.catItem:hover {
+    background: #2874f0;
+    color: white;
+    border-color: #2874f0;
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 6px 12px rgba(40, 116, 240, 0.2);
+}
+
+/* ===============================
+   PRODUCT GRID (5 PER ROW)
+================================ */
+
+.productGrid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 26px;
+    margin-top: 28px;
+}
+
+/* Responsive */
+@media (max-width: 1200px) {
+    .productGrid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+@media (max-width: 992px) {
+    .productGrid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .productGrid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+/* ===============================
+   STAR RATING (PREMIUM)
+================================ */
+
+.starRatingContainer {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.starWrap {
+    display: flex;
+    gap: 3px;
+}
+
+.star {
+    color: #ffb400;
+    filter: drop-shadow(0 2px 4px rgba(255, 180, 0, 0.4));
+    transition: transform 0.2s ease;
+}
+
+.starWrap .star:hover {
+    transform: scale(1.2);
+}
+
+.star.empty {
+    color: #d6d6d6;
+}
+
+.ratingValue {
+    background: linear-gradient(135deg, #ff6f00, #ff9100);
+    color: #fff;
+    font-size: 13px;
+    font-weight: 700;
+    padding: 4px 8px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(255, 111, 0, 0.45);
+}
+
+
+
+/* ===============================
+   PRODUCT CARD (UPGRADED)
+================================ */
+
+.productCard {
+    background: linear-gradient(180deg, #ffffff, #fafafa);
+    padding: 18px;
+    border-radius: 18px;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.35s ease;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 10px 28px rgba(0, 0, 0, 0.08);
+}
+
+.productCard::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at top,
+            rgba(40, 116, 240, 0.12),
+            transparent 60%);
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.productCard:hover::before {
+    opacity: 1;
+}
+
+.productCard:hover {
+    transform: translateY(-10px) scale(1.03);
+    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.15);
+}
+
+.productCard img {
+    width: 100%;
+    height: 180px;
+    object-fit: contain;
+    margin-bottom: 14px;
+    transition: transform 0.4s ease;
+}
+
+.productCard:hover img {
+    transform: scale(1.12);
+}
+
+.pTitle {
+    font-size: 17px;
+    font-weight: 700;
+    color: #1f1f1f;
+    margin-bottom: 6px;
+}
+
+.pMeta {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+    margin: 10px 0;
+}
+
+.pMeta .price {
+    font-size: 18px;
+    font-weight: 800;
+    color: #ff6f00;
+}
+
+.addBtn {
+    margin-top: 12px;
+    background: linear-gradient(90deg, #ff6f00, #ff9100);
+    color: white;
+    border: none;
+    padding: 12px;
+    width: 100%;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 600;
+    position: relative;
+        z-index: 5;
+}
+
+.addBtn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 14px rgba(255, 111, 0, 0.35);
+}
+
+/* ===============================
+   PRODUCT DETAILS – ULTRA PREMIUM
+================================ */
+
+.productDetails {
+    display: flex;
+    gap: 70px;
+    padding: 60px;
+    border-radius: 28px;
+    background:
+        radial-gradient(circle at top right, rgba(255, 145, 0, 0.18), transparent 50%),
+        linear-gradient(145deg, #ffffff, #f1f3f9);
+    box-shadow:
+        0 30px 90px rgba(0, 0, 0, 0.18),
+        inset 0 0 0 1px rgba(255, 255, 255, 0.6);
+    animation: fadeSlideUp 0.8s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+/* subtle glass shine */
+.productCard::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at top,
+            rgba(40, 116, 240, 0.12),
+            transparent 60%);
+    opacity: 0;
+    transition: opacity 0.3s;
+
+    /* 🔥 CRITICAL FIX */
+    pointer-events: none;
+}
+/* ================= IMAGE ================= */
+
+.productDetails .left {
+    flex: 1;
+    display: grid;
+    place-items: center;
+}
+
+.productDetails .left img {
+    width: 100%;
+    max-width: 480px;
+    border-radius: 26px;
+    background: white;
+    padding: 20px;
+    object-fit: contain;
+    box-shadow:
+        0 25px 60px rgba(0, 0, 0, 0.25),
+        inset 0 0 0 1px rgba(0, 0, 0, 0.05);
+    transition: transform 0.6s ease, box-shadow 0.6s ease;
+}
+
+.productDetails .left img:hover {
+    transform: rotateY(12deg) rotateX(3deg) scale(1.08);
+    box-shadow: 0 40px 90px rgba(0, 0, 0, 0.35);
+}
+
+/* ================= CONTENT ================= */
+
+.productDetails .right {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* TITLE */
+.productDetails h2 {
+    font-size: 40px;
+    font-weight: 900;
+    color: #121212;
+    letter-spacing: 0.5px;
+    margin-bottom: 12px;
+}
+
+/* PRICE */
+.productDetails .price {
+    font-size: 34px;
+    font-weight: 900;
+    color: #ff6f00;
+    margin-bottom: 18px;
+}
+
+/* CATEGORY CHIP */
+.productDetails .category {
+    display: inline-block;
+    background: rgba(40, 116, 240, 0.1);
+    color: #2874f0;
+    padding: 6px 14px;
+    border-radius: 999px;
+    font-size: 13px;
+    font-weight: 700;
+    width: fit-content;
+    margin-bottom: 16px;
+}
+
+/* ================= RATING ================= */
+
+.productDetails .ratingBlock {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 20px;
+}
+
+.starRatingContainer {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.star {
+    color: #f5c518;
+}
+
+.star.empty {
+    color: #d1d5db;
+}
+
+.ratingValueText {
+    font-size: 16px;
+    font-weight: 800;
+    color: #111;
+}
+
+.ratingScale {
+    font-size: 13px;
+    font-weight: 700;
+    color: #666;
+}
+
+/* ================= DESCRIPTION ================= */
+
+.productDetails p {
+    font-size: 16.5px;
+    line-height: 1.8;
+    color: #444;
+    max-width: 520px;
+    margin-bottom: 28px;
+}
+
+/* ================= CTA BUTTON ================= */
+
+.productDetails button {
+    align-self: flex-start;
+    padding: 18px 42px;
+    border-radius: 18px;
+    border: none;
+    font-size: 18px;
+    font-weight: 900;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+    background: linear-gradient(135deg, #ff6f00, #ff9100);
+    color: white;
+    box-shadow:
+        0 18px 40px rgba(255, 111, 0, 0.55),
+        inset 0 -3px 0 rgba(0, 0, 0, 0.15);
+    transition: all 0.35s ease;
+}
+
+.productDetails button:hover {
+    transform: translateY(-4px) scale(1.07);
+    box-shadow: 0 28px 60px rgba(255, 111, 0, 0.7);
+}
+
+.productDetails button:active {
+    transform: scale(0.96);
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 900px) {
+    .productDetails {
+        flex-direction: column;
+        padding: 40px 24px;
+        gap: 40px;
+        text-align: center;
+        align-items: center;
+    }
+
+    .productDetails button {
+        align-self: center;
+    }
+
+    .productDetails p {
+        max-width: 100%;
+    }
+        .productDetails .left img {
+            width: 90%;
+            height: auto;
+            margin-bottom: 20px;
+        }
+    
+        .productDetails .right {
+            align-items: center;
+        }
+}
+
+/* ================= ANIMATION ================= */
+
+@keyframes fadeSlideUp {
+    from {
+        opacity: 0;
+        transform: translateY(35px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* RESPONSIVE
+@media (max-width: 900px) {
+    .productDetails {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        
+    }
+
+    .productDetails .left img {
+        width: 90%;
+        height: auto;
+        margin-bottom: 20px;
+    }
+
+    .productDetails .right {
+        align-items: center;
+    }
+} */
+
+/* FADE IN ANIMATION */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+
+
+/* ===============================
+   PREMIUM HERO CAROUSEL (FINAL)
+================================ */
+
+.carousel {
+    position: relative;
+    height: 380px;
+    border-radius: 24px;
+    overflow: hidden;
+    margin: 25px 0 45px;
+    background: #000;
+    box-shadow: 0 30px 70px rgba(0, 0, 0, .25);
+}
+
+.carouselSlide {
+    position: absolute;
+    inset: 0;
+    background-size: cover;
+    background-position: center;
+    opacity: 0;
+    transform: scale(1.08);
+    transition: opacity 1s ease, transform 1.3s ease;
+}
+
+.carouselSlide.active {
+    opacity: 1;
+    transform: scale(1);
+}
+
+/* Dark gradient overlay */
+.carouselOverlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to right,
+            rgba(0, 0, 0, .65),
+            rgba(0, 0, 0, .25),
+            rgba(0, 0, 0, 0));
+}
+
+/* Text Card */
+.carouselText {
+    position: absolute;
+    left: 50px;
+    bottom: 50px;
+    max-width: 460px;
+    padding: 30px;
+    border-radius: 22px;
+    background: rgba(255, 255, 255, .12);
+    backdrop-filter: blur(14px);
+    color: #fff;
+    box-shadow: 0 16px 40px rgba(0, 0, 0, .45);
+    animation: slideUp .8s ease;
+}
+
+.carouselText h2 {
+    font-size: 34px;
+    font-weight: 800;
+    margin-bottom: 8px;
+}
+
+.carouselText p {
+    font-size: 17px;
+    opacity: .95;
+}
+
+/* Tag */
+.bannerTag {
+    display: inline-block;
+    background: linear-gradient(90deg, #ff6f00, #ff9100);
+    padding: 6px 16px;
+    border-radius: 30px;
+    font-size: 13px;
+    font-weight: 800;
+    margin-bottom: 12px;
+    box-shadow: 0 6px 18px rgba(255, 111, 0, .5);
+}
+
+/* CTA Button */
+.bannerBtn {
+    margin-top: 16px;
+    padding: 14px 26px;
+    border-radius: 14px;
+    border: none;
+    background: #fff;
+    color: #111;
+    font-weight: 800;
+    cursor: pointer;
+    transition: all .3s ease;
+}
+
+.bannerBtn:hover {
+    background: #ff9100;
+    color: #fff;
+    transform: translateY(-2px);
+}
+
+/* Arrows */
+.arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    border: none;
+    background: rgba(255, 255, 255, .85);
+    font-size: 28px;
+    cursor: pointer;
+    display: grid;
+    place-items: center;
+    transition: .3s;
+}
+
+.arrow:hover {
+    transform: translateY(-50%) scale(1.1);
+}
+
+.arrow.left {
+    left: 20px;
+}
+
+.arrow.right {
+    right: 20px;
+}
+
+/* Dots */
+.dots {
+    position: absolute;
+    bottom: 18px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+}
+
+.dot {
+    width: 18px;
+    height: 6px;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, .45);
+    cursor: pointer;
+    transition: .3s;
+}
+
+.dot.active {
+    width: 36px;
+    background: #fff;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    .carousel {
+        height: 220px;
+    }
+
+    .carouselText {
+        left: 16px;
+        bottom: 16px;
+        padding: 16px;
+    }
+
+    .carouselText h2 {
+        font-size: 20px;
+    }
+
+    .carouselText p {
+        font-size: 14px;
+    }
+}
+
+/* Animation */
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

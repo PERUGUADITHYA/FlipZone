@@ -1,0 +1,471 @@
+[
+  {
+    "id": 1,
+    "title": "Apple iPhone 14",
+    "price": 54999,
+    "image": "https://www.techspot.com/images2/downloads/topdownload/2022/09/2022-09-12-ts3_thumbs-e88-2.png",
+    "category": "Mobiles",
+    "rating": 4.5,
+    "description": "Premium smartphone with A15 Bionic chip, excellent camera quality, and smooth iOS performance."
+  },
+  {
+    "id": 2,
+    "title": "Samsung Galaxy S23",
+    "price": 59999,
+    "image": "https://m.media-amazon.com/images/I/71lD7eGdW-L._AC_UF350,350_QL80_.jpg",
+    "category": "Mobiles",
+    "rating": 4.3,
+    "description": "Flagship Android phone featuring AMOLED display, powerful processor, and refined camera system."
+  },
+  {
+    "id": 3,
+    "title": "OnePlus 11",
+    "price": 45999,
+    "image": "https://fdn2.gsmarena.com/vv/pics/oneplus/oneplus-11-3.jpg",
+    "category": "Mobiles",
+    "rating": 3.9,
+    "description": "Fast and smooth smartphone with OxygenOS, Snapdragon performance, and premium build."
+  },
+  {
+    "id": 4,
+    "title": "Redmi Note 12 Pro",
+    "price": 23999,
+    "image": "https://amateurphotographer.com/wp-content/uploads/sites/7/2023/03/Redmi-Note-12-Pro-5G-group-2.jpg",
+    "category": "Mobiles",
+    "rating": 4.1,
+    "description": "Affordable smartphone with AMOLED display, strong battery life, and capable camera."
+  },
+  {
+    "id": 5,
+    "title": "Realme GT Neo 3",
+    "price": 27999,
+    "image": "https://fdn2.gsmarena.com/vv/pics/realme/realme-gt-neo3-1.jpg",
+    "category": "Mobiles",
+    "rating": 3.8,
+    "description": "Performance-focused phone with fast charging and gaming-friendly hardware."
+  },
+
+  {
+    "id": 6,
+    "title": "Sony WH-1000XM5",
+    "price": 1499,
+    "image": "https://www.slashgear.com/img/gallery/sony-wh-1000xm5-review-the-price-of-more-clarity/l-intro-1653078671.jpg",
+    "category": "Audio",
+    "rating": 4.6,
+    "description": "Industry-leading noise cancellation headphones with premium sound clarity."
+  },
+  {
+    "id": 7,
+    "title": "Bose QuietComfort Earbuds",
+    "price": 1999,
+    "image": "https://platform.theverge.com/wp-content/uploads/sites/2/chorus/uploads/chorus_asset/file/21946559/IMG_0720-1.0.jpeg",
+    "category": "Audio",
+    "rating": 4.2,
+    "description": "True wireless earbuds with immersive sound and strong noise cancellation."
+  },
+  {
+    "id": 8,
+    "title": "JBL Flip 6 Speaker",
+    "price": 2999,
+    "image": "https://images-cdn.ubuy.co.in/677deb3873038239e3632140-jbl-harman-flip-6-bluetooth.jpg",
+    "category": "Audio",
+    "rating": 4.0,
+    "description": "Portable Bluetooth speaker with deep bass and waterproof design."
+  },
+  {
+    "id": 9,
+    "title": "Boat Rockerz 550",
+    "price": 1999,
+    "image": "https://m.media-amazon.com/images/I/61u1VALn6JL.jpg",
+    "category": "Audio",
+    "rating": 3.7,
+    "description": "Budget wireless headphones with punchy bass and long battery life."
+  },
+
+  {
+    "id": 10,
+    "title": "LG 55-inch 4K Smart TV",
+    "price": 44999,
+    "image": "https://rukminim2.flixcart.com/image/480/480/xif0q/television/6/u/v/55uq9000psd-55uq9000psd-lg-original-imaggczydzebqkqp.jpeg?q=90",
+    "category": "TVs",
+    "rating": 4.1,
+    "description": "4K UHD smart TV with vibrant colors and built-in streaming apps."
+  },
+  {
+    "id": 11,
+    "title": "Samsung 43-inch Smart TV",
+    "price": 32999,
+    "image": "https://m.media-amazon.com/images/I/71LJJrKbezL.jpg",
+    "category": "TVs",
+    "rating": 4.0,
+    "description": "Smart TV offering crisp visuals and seamless OTT app support."
+  },
+
+  {
+    "id": 12,
+    "title": "Nike Air Running Shoes",
+    "price": 3499,
+    "image": "https://cms-cdn.thesolesupplier.co.uk/2021/07/nike-air-zoom-pegasus-37-black-white-front-tsw.jpg",
+    "category": "Footwear",
+    "rating": 4.3,
+    "description": "Comfortable running shoes with responsive cushioning."
+  },
+  {
+    "id": 13,
+    "title": "Puma Men's Sneakers",
+    "price": 2999,
+    "image": "https://images.unsplash.com/photo-1552346154-21d32810aba3",
+    "category": "Footwear",
+    "rating": 3.7,
+    "description": "Stylish sneakers suitable for casual and daily wear."
+  },
+  {
+    "id": 14,
+    "title": "Adidas Ultraboost",
+    "price": 5999,
+    "image": "https://rukminim2.flixcart.com/image/480/640/xif0q/shoe/y/w/j/-original-imahg3u5usp7qjsc.jpeg?q=90",
+    "category": "Footwear",
+    "rating": 4.6,
+    "description": "Premium running shoes with superior comfort and energy return."
+  },
+
+  {
+    "id": 15,
+    "title": "Adidas Sports T-shirt",
+    "price": 999,
+    "image": "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab",
+    "category": "Fashion",
+    "rating": 3.8,
+    "description": "Breathable sportswear designed for workouts and active use."
+  },
+  {
+    "id": 16,
+    "title": "Levi's Men's Jeans",
+    "price": 2299,
+    "image": "https://i.ebayimg.com/images/g/UpUAAOSwQehm2gtJ/s-l1200.jpg",
+    "category": "Fashion",
+    "rating": 4.2,
+    "description": "Classic denim jeans with durable fabric and perfect fit."
+  },
+  {
+    "id": 17,
+    "title": "Allen Solly Shirt",
+    "price": 1899,
+    "image": "https://rukminim2.flixcart.com/image/480/640/xif0q/shirt/l/f/f/-original-imahc3fghkpdfrcj.jpeg?q=90",
+    "category": "Fashion",
+    "rating": 4.0,
+    "description": "Formal shirt suitable for office and business occasions."
+  },
+
+  {
+    "id": 18,
+    "title": "MacBook Air M2",
+    "price": 84999,
+    "image": "https://images.unsplash.com/photo-1517336714731-489689fd1ca8",
+    "category": "Laptops",
+    "rating": 4.7,
+    "description": "Ultra-thin laptop with powerful M2 chip and long battery life."
+  },
+  {
+    "id": 19,
+    "title": "Dell XPS 13",
+    "price": 54999,
+    "image": "https://www.bhphotovideo.com/images/fb/dell_p31pp_xps_13_9320_13_4_1718278.jpg",
+    "category": "Laptops",
+    "rating": 4.4,
+    "description": "Premium laptop with stunning display and compact design."
+  },
+  {
+    "id": 20,
+    "title": "HP Pavilion 15",
+    "price": 45999,
+    "image": "https://rukminim2.flixcart.com/image/480/640/xif0q/computer/1/r/5/-original-imah3nznjgnbykgq.jpeg",
+    "category": "Laptops",
+    "rating": 3.9,
+    "description": "Reliable laptop for daily productivity and entertainment."
+  },
+
+  {
+    "id": 21,
+    "title": "Canon EOS 200D",
+    "price": 34999,
+    "image": "https://images.unsplash.com/photo-1648781329670-5f00c1b37404",
+    "category": "Cameras",
+    "rating": 4.2,
+    "description": "Beginner-friendly DSLR with excellent image quality."
+  },
+  {
+    "id": 22,
+    "title": "Nikon D3500",
+    "price": 36999,
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTByxvLFWPHv9F6eG0ljV6i7mTTFpgmK52pnA&s",
+    "category": "Cameras",
+    "rating": 4.1,
+    "description": "Lightweight DSLR ideal for photography enthusiasts."
+  },
+
+  {
+    "id": 23,
+    "title": "Apple Watch Series 8",
+    "price": 4999,
+    "image": "https://os-wordpress-media.s3.ap-south-1.amazonaws.com/blog/wp-content/uploads/2022/09/07225344/Apple-Watch-Series-8-Feature-Image.jpg",
+    "category": "Wearables",
+    "rating": 4.5,
+    "description": "Advanced smartwatch with health and fitness tracking."
+  },
+  {
+    "id": 24,
+    "title": "Samsung Galaxy Watch 5",
+    "price": 1999,
+    "image": "https://specials-images.forbesimg.com/imageserve/630d0d45eff2963e107ec59f/960x0.png",
+    "category": "Wearables",
+    "rating": 4.2,
+    "description": "Smartwatch with accurate health sensors and sleek design."
+  },
+  {
+    "id": 25,
+    "title": "Fitbit Versa 3",
+    "price": 2999,
+    "image": "https://m.media-amazon.com/images/I/51p8albhiyL._AC_UF1000,1000_QL80_.jpg",
+    "category": "Wearables",
+    "rating": 3.9,
+    "description": "Fitness-focused smartwatch with GPS and heart tracking."
+  },
+
+  {
+    "id": 26,
+    "title": "Philips Air Fryer",
+    "price": 8999,
+    "image": "https://m.media-amazon.com/images/I/41q4KIebFZL.jpg",
+    "category": "Home Appliances",
+    "rating": 4.0,
+    "description": "Healthy cooking appliance using minimal oil."
+  },
+  {
+    "id": 27,
+    "title": "Dyson V11 Vacuum Cleaner",
+    "price": 9999,
+    "image": "https://media.johnlewiscontent.com/i/JohnLewis/112667342",
+    "category": "Home Appliances",
+    "rating": 4.4,
+    "description": "Powerful cordless vacuum cleaner with smart suction control."
+  },
+  {
+    "id": 28,
+    "title": "KitchenAid Mixer",
+    "price": 1999,
+    "image": "https://cdn.mos.cms.futurecdn.net/QzDmxNtyJeLyx33nYoNRib-1943-80.jpeg",
+    "category": "Home Appliances",
+    "rating": 4.3,
+    "description": "Durable kitchen mixer for baking and cooking needs."
+  },
+
+  {
+    "id": 29,
+    "title": "Wooden Study Table",
+    "price": 1999,
+    "image": "https://5.imimg.com/data5/QH/OM/MY-5542198/wooden-study-table.jpg",
+    "category": "Furniture",
+    "rating": 3.8,
+    "description": "Compact study table ideal for home and office use."
+  },
+  {
+    "id": 30,
+    "title": "Office Chair",
+    "price": 3499,
+    "image": "https://www.lnpworld.com/cdn/shop/products/50_530x@2x.jpg?v=1590651535",
+    "category": "Furniture",
+    "rating": 4.1,
+    "description": "Ergonomic office chair with adjustable height."
+  },
+
+  {
+    "id": 31,
+    "title": "Prestige Pressure Cooker",
+    "price": 2499,
+    "image": "https://jamesandco.in/wp-content/uploads/2024/09/617xVIiwZ2L._SL1500.jpg",
+    "category": "Kitchen",
+    "rating": 4.0,
+    "description": "Durable pressure cooker for fast and efficient cooking."
+  },
+  {
+    "id": 32,
+    "title": "Non-Stick Cookware Set",
+    "price": 3999,
+    "image": "https://5.imimg.com/data5/MF/UW/MY-22740806/15-piece-nonstick-stay-cool-handle-cookware-set-2c-black.jpg",
+    "category": "Kitchen",
+    "rating": 3.9,
+    "description": "Complete cookware set with easy-to-clean coating."
+  },
+
+  {
+    "id": 33,
+    "title": "Bluetooth Keyboard",
+    "price": 1499,
+    "image": "https://c1.neweggimages.com/productimage/nb640/BVAYS2505270DSJK6C3.jpg",
+    "category": "Accessories",
+    "rating": 3.8,
+    "description": "Compact wireless keyboard for laptops and tablets."
+  },
+  {
+    "id": 34,
+    "title": "Wireless Mouse",
+    "price": 799,
+    "image": "https://fijitraders.com/wp-content/uploads/2021/06/WIRELESS-MOUSE.jpg",
+    "category": "Accessories",
+    "rating": 4.1,
+    "description": "Smooth and responsive mouse for daily computing."
+  },
+
+  {
+    "id": 35,
+    "title": "Power Bank 20000mAh",
+    "price": 1999,
+    "image": "https://callmateindia.com/cdn/shop/products/Red_2_f6f1a1a2-e70b-4e98-bab3-48d4c60a4097.jpg?v=1721742266&width=1000",
+    "category": "Accessories",
+    "rating": 4.2,
+    "description": "High-capacity power bank with fast charging support."
+  },
+
+  {
+    "id": 36,
+    "title": "Travel Backpack",
+    "price": 1999,
+    "image": "https://img.lovepik.com/photo/60204/1278.jpg_wh300.jpg",
+    "category": "Bags",
+    "rating": 4.0,
+    "description": "Spacious backpack ideal for travel and office use."
+  },
+  {
+    "id": 37,
+    "title": "Laptop Sleeve",
+    "price": 899,
+    "image": "https://m.media-amazon.com/images/I/81rRMwFG0+L.jpg",
+    "category": "Bags",
+    "rating": 3.7,
+    "description": "Protective sleeve to keep your laptop safe."
+  },
+
+  {
+    "id": 38,
+    "title": "Men's Wallet",
+    "price": 999,
+    "image": "https://wallpapers.com/images/hd/leather-wallets-stacked-hq6xo9yj4rcap0wg-2.jpg",
+    "category": "Accessories",
+    "rating": 3.9,
+    "description": "Slim leather wallet with multiple card slots."
+  },
+  {
+    "id": 39,
+    "title": "Sunglasses",
+    "price": 499,
+    "image": "https://images.pexels.com/photos/46710/pexels-photo-46710.jpeg?cs=srgb&dl=pexels-nitin-creative-46710.jpg&fm=jpg",
+    "category": "Accessories",
+    "rating": 3.8,
+    "description": "Stylish UV-protected sunglasses for daily wear."
+  },
+
+  {
+    "id": 40,
+    "title": "Gaming Keyboard",
+    "price": 999,
+    "image": "https://img.freepik.com/free-photo/view-illuminated-neon-gaming-keyboard-setup-controller_23-2149529367.jpg?semt=ais_hybrid&w=740&q=80",
+    "category": "Gaming",
+    "rating": 4.3,
+    "description": "RGB mechanical keyboard designed for gamers."
+  },
+  {
+    "id": 41,
+    "title": "Gaming Mouse",
+    "price": 499,
+    "image": "https://wallpapers.com/images/hd/gaming-mice-1600-x-900-wallpaper-vitcrhi4vf0gfvzn.jpg",
+    "category": "Gaming",
+    "rating": 4.1,
+    "description": "High-precision gaming mouse with adjustable DPI."
+  },
+
+  {
+    "id": 42,
+    "title": "Cricket Bat",
+    "price": 800,
+    "image": "https://dkpcricketonline.com/cdn/shop/collections/image_419d887e-bcd5-4469-9925-776dc84db52b.heic?v=1754925807&width=2400",
+    "category": "Sports",
+    "rating": 4.0,
+    "description": "Lightweight cricket bat suitable for all players."
+  },
+  {
+    "id": 43,
+    "title": "Football",
+    "price": 449,
+    "image": "https://t4.ftcdn.net/jpg/08/18/26/31/360_F_818263163_yHtLpbjIebhb8LoDgE8N8OswDSTQcQqM.jpg",
+    "category": "Sports",
+    "rating": 3.8,
+    "description": "Durable football for practice and matches."
+  },
+
+  {
+    "id": 44,
+    "title": "Yoga Mat",
+    "price": 299,
+    "image": "https://sppartos.com/cdn/shop/files/31VX-aIlgWL_300x300.jpg?v=1702469142",
+    "category": "Fitness",
+    "rating": 4.2,
+    "description": "Non-slip yoga mat for comfortable workouts."
+  },
+  {
+    "id": 45,
+    "title": "Dumbbell Set",
+    "price": 1199,
+    "image": "https://m.media-amazon.com/images/I/61OlRii977L._AC_UF894,1000_QL80_.jpg",
+    "category": "Fitness",
+    "rating": 4.1,
+    "description": "Adjustable dumbbell set for home workouts."
+  },
+
+  {
+    "id": 46,
+    "title": "Electric Kettle",
+    "price": 699,
+    "image": "https://images.philips.com/is/image/philipsconsumer/vrs_05e438e0ba2f3f5b44bdb70a523281228fb381f1?$pnglarge$&wid=1250",
+    "category": "Kitchen",
+    "rating": 3.9,
+    "description": "Fast boiling electric kettle with auto shut-off."
+  },
+  {
+    "id": 47,
+    "title": "Toaster",
+    "price": 1299,
+    "image": "https://i.pinimg.com/736x/0d/16/8d/0d168dd61e61d206e12cd432816dc853.jpg",
+    "category": "Kitchen",
+    "rating": 3.8,
+    "description": "Two-slice toaster with adjustable browning."
+  },
+
+  {
+    "id": 48,
+    "title": "Bedside Table Lamp",
+    "price": 499,
+    "image": "https://cdn.thewirecutter.com/wp-content/media/2024/09/bedsidelamps-2048px-04904-2x1-1.jpg?width=2048&quality=75&crop=2:1&auto=webp",
+    "category": "Home Decor",
+    "rating": 4.0,
+    "description": "Modern lamp to enhance bedroom ambiance."
+  },
+  {
+    "id": 49,
+    "title": "Wall Clock",
+    "price": 699,
+    "image": "https://images.pexels.com/photos/191703/pexels-photo-191703.jpeg?cs=srgb&dl=pexels-anthony-derosa-39577-191703.jpg&fm=jpg",
+    "category": "Home Decor",
+    "rating": 3.7,
+    "description": "Minimal wall clock with silent movement."
+  },
+  {
+    "id": 50,
+    "title": "Indoor Plant",
+    "price": 350,
+    "image": "https://img.freepik.com/free-photo/indoor-plants-studio_23-2151022062.jpg",
+    "category": "Home Decor",
+    "rating": 4.4,
+    "description": "Low-maintenance indoor plant for home decor."
+  }
+]

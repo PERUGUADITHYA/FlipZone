@@ -1,0 +1,228 @@
+/* ================= TRACK PAGE ================= */
+.trackPage {
+    padding: 50px 30px;
+    max-width: 900px;
+    margin: 60px auto;
+    background: linear-gradient(135deg, #ffffff, #f3f6fb);
+    border-radius: 24px;
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.18);
+    font-family: 'Poppins', sans-serif;
+    animation: pageFade 0.7s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Decorative Glow */
+.trackPage::before {
+    content: "";
+    position: absolute;
+    inset: -50%;
+    background: radial-gradient(circle, rgba(33, 150, 243, 0.12), transparent 70%);
+    animation: rotateGlow 12s linear infinite;
+    z-index: 0;
+}
+
+.trackPage * {
+    position: relative;
+    z-index: 1;
+}
+
+.trackPage h2 {
+    text-align: center;
+    margin-bottom: 60px;
+    font-size: 32px;
+    font-weight: 700;
+    color: #1f2937;
+    letter-spacing: 1px;
+}
+
+/* ================= PROGRESS CONTAINER ================= */
+.progressContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+/* ================= STEP ================= */
+.progressStep {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1;
+    position: relative;
+    transition: all 0.4s ease;
+}
+
+/* ================= CIRCLE ================= */
+.circle {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background: linear-gradient(145deg, #dcdcdc, #bdbdbd);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-size: 26px;
+    font-weight: bold;
+    box-shadow: inset 0 0 0 rgba(0, 0, 0, 0),
+        0 8px 18px rgba(0, 0, 0, 0.15);
+    transition: all 0.5s ease;
+    z-index: 2;
+}
+
+/* ACTIVE CIRCLE */
+.circle.active {
+    background: linear-gradient(135deg, #4caf50, #21cb5f);
+    transform: scale(1.45);
+    box-shadow: 0 0 0 8px rgba(76, 175, 80, 0.15),
+        0 15px 35px rgba(76, 175, 80, 0.5);
+    animation: pulseGlow 1.5s infinite;
+}
+
+/* ================= LABEL ================= */
+.label {
+    margin-top: 18px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #6b7280;
+    text-align: center;
+    transition: all 0.4s ease;
+}
+
+.progressStep:hover .label {
+    color: #111827;
+    transform: translateY(-4px);
+}
+
+/* ACTIVE LABEL */
+.circle.active+.label {
+    color: #2e7d32;
+}
+
+/* ================= LINE ================= */
+.line {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 6px;
+    background: #e5e7eb;
+    transform: translateX(50%);
+    border-radius: 6px;
+    z-index: 1;
+    overflow: hidden;
+}
+
+/* FILLED LINE */
+.line.active::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(90deg, #4caf50, #21cb5f);
+    animation: fillLine 1s ease forwards;
+}
+
+/* ================= ANIMATIONS ================= */
+@keyframes pageFade {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes pulseGlow {
+    0% {
+        box-shadow: 0 0 0 0 rgba(76, 175, 80, 0.6),
+            0 15px 35px rgba(76, 175, 80, 0.4);
+    }
+
+    70% {
+        box-shadow: 0 0 0 14px rgba(76, 175, 80, 0),
+            0 15px 35px rgba(76, 175, 80, 0.4);
+    }
+
+    100% {
+        box-shadow: 0 0 0 0 rgba(76, 175, 80, 0);
+    }
+}
+
+@keyframes fillLine {
+    from {
+        transform: scaleX(0);
+        transform-origin: left;
+    }
+
+    to {
+        transform: scaleX(1);
+        transform-origin: left;
+    }
+}
+
+@keyframes rotateGlow {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* ================= MOBILE RESPONSIVE ================= */
+@media (max-width: 768px) {
+
+    .progressContainer {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 50px;
+    }
+
+    .progressStep {
+        flex-direction: row;
+        align-items: center;
+        width: 100%;
+    }
+
+    .circle {
+        width: 60px;
+        height: 60px;
+        font-size: 22px;
+    }
+
+    .label {
+        margin-left: 20px;
+        margin-top: 0;
+        text-align: left;
+    }
+
+    .line {
+        width: 6px;
+        height: 100%;
+        left: 30px;
+        top: 60px;
+        transform: none;
+    }
+
+    .line.active::after {
+        animation: fillLineVertical 1s ease forwards;
+    }
+}
+
+@keyframes fillLineVertical {
+    from {
+        transform: scaleY(0);
+        transform-origin: top;
+    }
+
+    to {
+        transform: scaleY(1);
+        transform-origin: top;
+    }
+}

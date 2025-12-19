@@ -1,0 +1,238 @@
+/* ================= RESET ================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+/* ================= AUTH CONTAINER ================= */
+.authContainer {
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    background: #000;
+}
+
+/* ================= BACKGROUND ================= */
+.authLeft {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    overflow: hidden;
+}
+
+.authLeftBackground {
+    position: absolute;
+    inset: 0;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    filter: brightness(0.65) contrast(1.2);
+    animation: zoomPan 40s linear infinite;
+}
+
+.authLeft::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.3), rgba(40, 116, 240, 0.25));
+    z-index: 1;
+    animation: overlayMove 20s linear infinite;
+}
+
+/* OPTIONAL PARTICLES */
+.particles {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    z-index: 2;
+}
+
+/* ================= FORM ================= */
+.authRight {
+    position: relative;
+    z-index: 3;
+    width: 400px;
+    max-width: 90%;
+    backdrop-filter: blur(18px) saturate(180%);
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 25px;
+    padding: 50px 40px;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5), inset 0 0 2px rgba(255, 255, 255, 0.1);
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    animation: popIn 0.8s ease forwards;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.authRight:hover {
+    transform: scale(1.05);
+    box-shadow: 0 25px 60px rgba(0, 180, 255, 0.7), inset 0 0 5px rgba(255, 255, 255, 0.2);
+}
+
+/* ================= CARD ================= */
+.authCard {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.authCard h2 {
+    text-align: center;
+    font-size: 38px;
+    font-weight: 900;
+    color: #00d4ff;
+    text-shadow: 0 0 10px #00d4ff, 0 0 20px rgba(0, 212, 255, 0.5);
+}
+
+/* ================= INPUTS ================= */
+.authCard .inputWrapper {
+    position: relative;
+}
+
+.authCard input {
+    width: 100%;
+    padding: 16px 16px 16px 16px;
+    border-radius: 14px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    background: rgba(255, 255, 255, 0.05);
+    color: #fff;
+    outline: none;
+    font-size: 15px;
+    backdrop-filter: blur(8px);
+    box-shadow: 0 0 10px rgba(0, 212, 255, 0.2) inset;
+    transition: 0.4s;
+}
+
+.authCard input:focus {
+    border-color: #00d4ff;
+    box-shadow: 0 0 8px #00d4ff, 0 0 20px rgba(0, 212, 255, 0.5) inset;
+}
+
+.authCard input::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+/* ================= PASSWORD ICON ================= */
+.passwordWrapper {
+    position: relative;
+}
+
+.passwordWrapper svg {
+    position: absolute;
+    top: 50%;
+    right: 16px;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: #00d4ff;
+    transition: 0.3s;
+}
+
+.passwordWrapper svg:hover {
+    transform: translateY(-50%) scale(1.3);
+    color: #fff;
+}
+
+/* ================= BUTTON ================= */
+.authCard button {
+    padding: 16px;
+    border: none;
+    border-radius: 16px;
+    background: linear-gradient(135deg, #2874f0, #00d4ff);
+    color: white;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.35s;
+    letter-spacing: 0.5px;
+    box-shadow: 0 0 10px #00d4ff, 0 0 25px rgba(0, 212, 255, 0.5);
+}
+
+.authCard button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px #00d4ff, 0 0 40px rgba(0, 212, 255, 0.7);
+}
+
+/* ================= LINKS ================= */
+.authCard p {
+    text-align: center;
+    font-size: 14px;
+    color: #fff;
+}
+
+.authCard p a {
+    color: #00d4ff;
+    font-weight: 600;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.authCard p a:hover {
+    text-decoration: underline;
+    color: #00ffff;
+}
+
+.forgot {
+    text-align: center;
+    font-size: 14px;
+    color: #00d4ff;
+    cursor: pointer;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.forgot:hover {
+    color: #00ffff;
+    text-decoration: underline;
+}
+
+/* ================= ANIMATIONS ================= */
+@keyframes popIn {
+    from {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes zoomPan {
+    0% {
+        transform: scale(1) translate(0, 0);
+    }
+
+    50% {
+        transform: scale(1.05) translate(-20px, -10px);
+    }
+
+    100% {
+        transform: scale(1) translate(0, 0);
+    }
+}
+
+@keyframes overlayMove {
+    0% {
+        background-position: 0 0;
+    }
+
+    100% {
+        background-position: 200% 200%;
+    }
+}
+
+/* ================= MOBILE ================= */
+@media (max-width: 900px) {
+    .authRight {
+        width: 90%;
+        padding: 40px 30px;
+    }
+}

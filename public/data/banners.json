@@ -1,0 +1,68 @@
+{
+  "topBanners": [
+    {
+      "id": 1,
+      "image": "https://www.samaa.tv/images/mobile-phones.jpg",
+      "title": "Latest Smartphones",
+      "subtitle": "Up to 40% Off",
+      "cta": "Shop Now",
+      "tag": "Hot Deal"
+    },
+    {
+      "id": 2,
+      "image": "https://thumbs.dreamstime.com/b/shopping-fashion-sale-style-people-concept-young-woman-blue-jacket-choosing-light-clothing-store-102346526.jpg",
+      "title": "Fashion Sale",
+      "subtitle": "Trending Styles 2025",
+      "cta": "Explore Collection",
+      "tag": "Trending"
+    },
+    {
+      "id": 3,
+      "image": "https://images.unsplash.com/photo-1468495244123-6c6c332eeece?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8Z2FkZ2V0fGVufDB8fDB8fHww",
+      "title": "Smart Gadgets",
+      "subtitle": "Best Deals Today",
+      "cta": "Grab Offers",
+      "tag": "Best Seller"
+    },
+    {
+      "id": 4,
+      "image": "https://tox.com/_next/image?url=https%3A%2F%2Fhub.tox.com%2Fstoryblok%2Fasset%2F1920x1440%2Fbbda377b8f%2F2024_tox_home_appliances.jpg%3F_hash%3Dm0U%252F77SceDHXpgG8NnPVHnAXa61DleF9SSgaKYPoKmM%253D&w=3840&q=75",
+      "title": "Home Essentials",
+      "subtitle": "Upgrade Your Living",
+      "cta": "View Deals",
+      "tag": "New"
+    },
+    {
+      "id": 5,
+      "image": "https://png.pngtree.com/background/20230425/original/pngtree-products-of-personal-care-picture-image_2475177.jpg",
+      "title": "Beauty & Care",
+      "subtitle": "Glow Everyday",
+      "cta": "Shop Beauty",
+      "tag": "Top Rated"
+    },
+    {
+      "id": 6,
+      "image": "https://t4.ftcdn.net/jpg/06/58/07/85/360_F_658078586_j0mXD6y8edHgVMJs5cL1JfLlzTSJ6y6y.jpg",
+      "title": "Footwear Collection",
+      "subtitle": "Comfort Meets Style",
+      "cta": "Step In",
+      "tag": "Limited Stock"
+    },
+    {
+      "id": 7,
+      "image": "https://storage.googleapis.com/kaggle-datasets-images/5242261/8733281/4bb649e575afb97fb315d48bc11bd4dc/dataset-cover.jpg?t=2024-06-19-23-31-33",
+      "title": "Electronics Mega Sale",
+      "subtitle": "Deals You Can't Miss",
+      "cta": "Buy Now",
+      "tag": "Mega Sale"
+    },
+    {
+      "id": 8,
+      "image": "https://burst.shopifycdn.com/photos/clothes-on-a-rack-in-a-clothing-store.jpg?width=925&format=pjpg&exif=0&iptc=0",
+      "title": "Seasonal Picks",
+      "subtitle": "Fresh Styles Just Arrived",
+      "cta": "Discover",
+      "tag": "Editor's Choice"
+    }
+  ]
+}

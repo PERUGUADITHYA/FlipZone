@@ -1,0 +1,271 @@
+/* ===========================
+   GLOBAL CART PAGE
+=========================== */
+
+/* ===========================
+   GLOBAL CART PAGE (FIXED)
+=========================== */
+
+.cartPage {
+    min-height: calc(100vh - 95px - 40px);
+    /* 95px = fixed header, 40px = footer gap */
+
+    background: linear-gradient(135deg, #ffffff, #f5f8ff);
+    padding: 30px;
+    margin: 0 auto;
+    /* 🔥 remove vertical margin */
+    margin-bottom: 40px;
+    /* spacing before footer */
+    width: 92%;
+    max-width: 1100px;
+
+    border-radius: 18px;
+    box-shadow:
+        0 20px 50px rgba(0, 0, 0, 0.12),
+        inset 0 0 0 1px rgba(255, 255, 255, 0.6);
+
+    animation: pageEnter 0.7s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Title */
+.cartPage h2 {
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 30px;
+    color: #1a1a1a;
+    position: relative;
+}
+
+.cartPage h2::after {
+    content: "";
+    width: 60px;
+    height: 4px;
+    background: linear-gradient(90deg, #2874f0, #ff9f00);
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    border-radius: 5px;
+}
+
+/* ===========================
+   TABLE
+=========================== */
+
+.cartTable {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0 12px;
+}
+
+.cartTable thead th {
+    background: linear-gradient(135deg, #2874f0, #003bb3);
+    color: white;
+    padding: 14px;
+    text-align: left;
+    font-weight: 600;
+    letter-spacing: 0.3px;
+}
+
+.cartTable thead th:first-child {
+    border-radius: 12px 0 0 12px;
+}
+
+.cartTable thead th:last-child {
+    border-radius: 0 12px 12px 0;
+}
+
+/* Row Card Style */
+.cartTable tbody tr {
+    background: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(8px);
+    border-radius: 14px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cartTable tbody tr:hover {
+    transform: translateY(-4px) scale(1.01);
+    box-shadow: 0 18px 35px rgba(0, 0, 0, 0.12);
+}
+
+.cartTable td {
+    padding: 16px;
+    vertical-align: middle;
+}
+
+/* ===========================
+   ITEM COLUMN
+=========================== */
+
+.cartItem {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.cartItem img {
+    width: 70px;
+    height: 70px;
+    object-fit: contain;
+    border-radius: 12px;
+    padding: 6px;
+    background: linear-gradient(135deg, #f4f6ff, #ffffff);
+    box-shadow: inset 0 0 0 1px #eee;
+    transition: transform 0.3s ease;
+}
+
+.cartTable tbody tr:hover img {
+    transform: scale(1.08) rotate(-1deg);
+}
+
+.cartItem div {
+    font-weight: 600;
+    color: #333;
+}
+
+/* ===========================
+   QUANTITY INPUT
+=========================== */
+
+.cartTable input[type="number"] {
+    width: 70px;
+    padding: 8px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    font-size: 15px;
+    text-align: center;
+    transition: 0.25s;
+}
+
+.cartTable input[type="number"]:focus {
+    outline: none;
+    border-color: #2874f0;
+    box-shadow: 0 0 0 3px rgba(40, 116, 240, 0.15);
+}
+
+/* ===========================
+   BUTTONS
+=========================== */
+
+.delBtn,
+.clearBtn,
+.checkoutBtn {
+    border: none;
+    border-radius: 10px;
+    padding: 10px 18px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.25s ease, box-shadow 0.25s ease, background 0.3s;
+}
+
+/* Remove */
+.delBtn {
+    background: linear-gradient(135deg, #ff4d4f, #d9363e);
+    color: white;
+    box-shadow: 0 6px 16px rgba(255, 77, 79, 0.35);
+}
+
+.delBtn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 22px rgba(255, 77, 79, 0.45);
+}
+
+/* Clear */
+.clearBtn {
+    background: linear-gradient(135deg, #555, #333);
+    color: white;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
+}
+
+.clearBtn:hover {
+    transform: translateY(-2px);
+}
+
+/* Checkout */
+.checkoutBtn {
+    background: linear-gradient(135deg, #ff9f00, #ff6f00);
+    color: white;
+    box-shadow: 0 8px 22px rgba(255, 159, 0, 0.45);
+}
+
+.checkoutBtn:hover {
+    transform: translateY(-3px) scale(1.02);
+    box-shadow: 0 14px 30px rgba(255, 159, 0, 0.6);
+}
+
+/* ===========================
+   SUMMARY BAR
+=========================== */
+
+.cartSummary {
+    margin-top: 30px;
+    padding: 18px 22px;
+    border-radius: 16px;
+    background: linear-gradient(135deg, #f9fbff, #ffffff);
+    box-shadow: 0 14px 30px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+}
+
+.cartSummary h3 {
+    font-size: 22px;
+    font-weight: 700;
+    color: #1a1a1a;
+}
+
+/* ===========================
+   EMPTY CART
+=========================== */
+
+.cartPage p {
+    margin-top: auto;
+    margin-bottom: auto;
+    text-align: center;
+    font-size: 18px;
+    color: #777;
+}
+/* ===========================
+   ANIMATIONS
+=========================== */
+
+@keyframes pageEnter {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ===========================
+   RESPONSIVE
+=========================== */
+
+@media (max-width: 768px) {
+    .cartTable thead {
+        display: none;
+    }
+
+    .cartTable tbody tr {
+        display: block;
+        padding: 12px;
+    }
+
+    .cartTable td {
+        display: flex;
+        justify-content: space-between;
+        padding: 10px 8px;
+    }
+
+    .cartSummary {
+        flex-direction: column;
+        text-align: center;
+    }
+}

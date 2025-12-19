@@ -1,0 +1,212 @@
+/* ================= FOOTER LAYOUT FIX ================= */
+body,
+#root {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.contentWrapper {
+    flex: 1;
+}
+
+/* ================= FOOTER ================= */
+.footerContainer {
+    width: 100%;
+    background: linear-gradient(135deg, #0f1c2e, #172337);
+    color: #ffffff;
+    padding: 60px 50px 25px;
+    font-family: "Inter", sans-serif;
+    margin-top: auto;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Decorative glow */
+.footerContainer::before {
+    content: "";
+    position: absolute;
+    inset: -40%;
+    background: radial-gradient(circle, rgba(40, 116, 240, 0.18), transparent 70%);
+    animation: footerGlow 14s linear infinite;
+    z-index: 0;
+}
+
+.footerContainer * {
+    position: relative;
+    z-index: 1;
+}
+
+/* ================= FOOTER GRID ================= */
+.footerTop {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 50px;
+    margin-bottom: 45px;
+}
+
+/* ================= FOOTER COLUMN ================= */
+.footerColumn h3 {
+    font-size: 24px;
+    margin-bottom: 14px;
+    font-weight: 700;
+}
+
+.footerColumn h4 {
+    font-size: 18px;
+    margin-bottom: 12px;
+    font-weight: 600;
+}
+
+.footerColumn p {
+    color: #cfd6e1;
+    line-height: 1.7;
+    font-size: 14px;
+}
+
+/* ================= LINKS ================= */
+.footerColumn ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footerColumn ul li {
+    margin: 10px 0;
+    font-size: 14px;
+    color: #c0c7d6;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.footerColumn ul li::before {
+    content: "›";
+    position: absolute;
+    left: -14px;
+    opacity: 0;
+    transition: 0.3s;
+    color: #2874f0;
+}
+
+.footerColumn ul li:hover {
+    color: #ffffff;
+    transform: translateX(10px);
+}
+
+.footerColumn ul li:hover::before {
+    opacity: 1;
+}
+
+/* ================= EMAIL SUBSCRIBE (FIXED & RESPONSIVE) ================= */
+.emailSubscribe {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    width: 100%;
+    max-width: 260px;
+    background: rgba(255, 255, 255, 0.08);
+    padding: 6px;
+    border-radius: 12px;
+    box-sizing: border-box;
+}
+
+.emailSubscribe input {
+    flex: 1 1 auto;
+    min-width: 0;
+    /* 🔥 MOST IMPORTANT FIX */
+    padding: 10px 12px;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+    font-size: 14px;
+    background: #ffffff;
+    color: #333;
+}
+
+.emailSubscribe input::placeholder {
+    color: #888;
+    font-size: 13px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* Button stays inside always */
+.emailSubscribe button {
+    flex-shrink: 0;
+    padding: 10px 14px;
+    background: linear-gradient(135deg, #2874f0, #0050c0);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+}
+
+.emailSubscribe button:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 8px 18px rgba(40, 116, 240, 0.45);
+}
+/* ================= SOCIAL ICONS ================= */
+.social {
+    margin-top: 10px;
+}
+
+.social span {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 42px;
+    height: 42px;
+    margin-right: 10px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.08);
+    font-size: 20px;
+    cursor: pointer;
+    transition: all 0.35s ease;
+}
+
+.social span:hover {
+    transform: translateY(-6px) scale(1.15);
+    background: linear-gradient(135deg, #2874f0, #0050c0);
+    box-shadow: 0 12px 25px rgba(40, 116, 240, 0.6);
+}
+
+/* ================= FOOTER BOTTOM ================= */
+.footerBottom {
+    margin-top: 35px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+    text-align: center;
+    color: #b9c1d0;
+    font-size: 14px;
+}
+
+/* ================= ANIMATIONS ================= */
+@keyframes footerGlow {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 768px) {
+    .footerContainer {
+        padding: 50px 25px 25px;
+    }
+
+    .footerTop {
+        gap: 35px;
+    }
+
+    .footerColumn h3 {
+        font-size: 22px;
+    }
+}
