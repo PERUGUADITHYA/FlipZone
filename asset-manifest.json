@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/FlipcartLite/static/css/main.29999e1a.css",
-    "main.js": "/FlipcartLite/static/js/main.38c9e425.js",
-    "index.html": "/FlipcartLite/index.html",
-    "main.29999e1a.css.map": "/FlipcartLite/static/css/main.29999e1a.css.map",
-    "main.38c9e425.js.map": "/FlipcartLite/static/js/main.38c9e425.js.map"
+    "main.css": "/FlipZone/static/css/main.29999e1a.css",
+    "main.js": "/FlipZone/static/js/main.ac8beb16.js",
+    "index.html": "/FlipZone/index.html",
+    "main.29999e1a.css.map": "/FlipZone/static/css/main.29999e1a.css.map",
+    "main.ac8beb16.js.map": "/FlipZone/static/js/main.ac8beb16.js.map"
   },
   "entrypoints": [
     "static/css/main.29999e1a.css",
-    "static/js/main.38c9e425.js"
+    "static/js/main.ac8beb16.js"
   ]
 }
