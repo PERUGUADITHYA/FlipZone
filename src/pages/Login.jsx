@@ -96,26 +96,33 @@ const Login = ({ setUser }) => {
           <h2>{forgot ? "Reset Password" : "Login"}</h2>
 
           {/* EMAIL */}
-          <input
-            placeholder="Email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-          />
+          <div className="inputGroup">
+            <label>Email</label>
+            <input
+              type="email"
+              placeholder="Enter your email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+            />
+          </div>
 
           {/* LOGIN PASSWORD */}
           {!forgot && (
-            <div className="passwordWrapper">
-              <input
-                type={showPass ? "text" : "password"}
-                placeholder="Password"
-                value={password}
-                onChange={(e) => setPassword(e.target.value)}
-              />
-              {showPass ? (
-                <AiOutlineEyeInvisible onClick={() => setShowPass(false)} />
-              ) : (
-                <AiOutlineEye onClick={() => setShowPass(true)} />
-              )}
+            <div className="inputGroup">
+              <label>Password</label>
+              <div className="passwordWrapper">
+                <input
+                  type={showPass ? "text" : "password"}
+                  placeholder="Enter your password"
+                  value={password}
+                  onChange={(e) => setPassword(e.target.value)}
+                />
+                {showPass ? (
+                  <AiOutlineEyeInvisible onClick={() => setShowPass(false)} />
+                ) : (
+                  <AiOutlineEye onClick={() => setShowPass(true)} />
+                )}
+              </div>
             </div>
           )}
 
@@ -126,34 +133,42 @@ const Login = ({ setUser }) => {
 
           {forgot && emailSent && (
             <>
-              <div className="passwordWrapper">
-                <input
-                  type={showNewPass ? "text" : "password"}
-                  placeholder="New Password"
-                  value={newPass}
-                  onChange={(e) => setNewPass(e.target.value)}
-                />
-                {showNewPass ? (
-                  <AiOutlineEyeInvisible
-                    onClick={() => setShowNewPass(false)}
+              <div className="inputGroup">
+                <label>New Password</label>
+                <div className="passwordWrapper">
+                  <input
+                    type={showNewPass ? "text" : "password"}
+                    placeholder="Enter new password"
+                    value={newPass}
+                    onChange={(e) => setNewPass(e.target.value)}
                   />
-                ) : (
-                  <AiOutlineEye onClick={() => setShowNewPass(true)} />
-                )}
+                  {showNewPass ? (
+                    <AiOutlineEyeInvisible
+                      onClick={() => setShowNewPass(false)}
+                    />
+                  ) : (
+                    <AiOutlineEye onClick={() => setShowNewPass(true)} />
+                  )}
+                </div>
               </div>
 
-              <div className="passwordWrapper">
-                <input
-                  type={showRePass ? "text" : "password"}
-                  placeholder="Re-enter Password"
-                  value={rePass}
-                  onChange={(e) => setRePass(e.target.value)}
-                />
-                {showRePass ? (
-                  <AiOutlineEyeInvisible onClick={() => setShowRePass(false)} />
-                ) : (
-                  <AiOutlineEye onClick={() => setShowRePass(true)} />
-                )}
+              <div className="inputGroup">
+                <label>Re-enter Password</label>
+                <div className="passwordWrapper">
+                  <input
+                    type={showRePass ? "text" : "password"}
+                    placeholder="Re-enter password"
+                    value={rePass}
+                    onChange={(e) => setRePass(e.target.value)}
+                  />
+                  {showRePass ? (
+                    <AiOutlineEyeInvisible
+                      onClick={() => setShowRePass(false)}
+                    />
+                  ) : (
+                    <AiOutlineEye onClick={() => setShowRePass(true)} />
+                  )}
+                </div>
               </div>
 
               <button onClick={resetPassword}>Reset Password</button>

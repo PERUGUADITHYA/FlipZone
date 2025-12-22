@@ -46,32 +46,46 @@ const Register = ({ setUser }) => {
       <div className="authRight">
         <div className="authCard">
           <h2>Register</h2>
-          <input
-            placeholder="Full Name"
-            value={name}
-            onChange={(e) => setName(e.target.value)}
-          />
-          <input
-            placeholder="Email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-          />
-          <div className="passwordWrapper">
+          <div className="inputGroup">
+            <label>Full Name</label>
             <input
-              type={showPass ? "text" : "password"}
-              placeholder="Password"
-              value={password}
-              onChange={(e) => setPassword(e.target.value)}
+              type="text"
+              placeholder="Enter your full name"
+              value={name}
+              onChange={(e) => setName(e.target.value)}
             />
-            {showPass ? (
-              <AiOutlineEyeInvisible
-                size={22}
-                onClick={() => setShowPass(false)}
-              />
-            ) : (
-              <AiOutlineEye size={22} onClick={() => setShowPass(true)} />
-            )}
           </div>
+
+          <div className="inputGroup">
+            <label>Email</label>
+            <input
+              type="email"
+              placeholder="Enter your email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+            />
+          </div>
+
+          <div className="inputGroup">
+            <label>Password</label>
+            <div className="passwordWrapper">
+              <input
+                type={showPass ? "text" : "password"}
+                placeholder="Create a password"
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
+              />
+              {showPass ? (
+                <AiOutlineEyeInvisible
+                  size={22}
+                  onClick={() => setShowPass(false)}
+                />
+              ) : (
+                <AiOutlineEye size={22} onClick={() => setShowPass(true)} />
+              )}
+            </div>
+          </div>
+
           <button onClick={handleRegister}>Register</button>
           <p>
             Already have account? <Link to="/login">Login</Link>
