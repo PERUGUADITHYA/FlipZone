@@ -266,3 +266,83 @@ body {
     box-shadow: 0 0 0 0 rgba(255, 152, 0, 0);
   }
 }
+
+/* ================= MOBILE ================= */
+.mobileMenuBtn {
+  display: none;
+  color: white;
+  cursor: pointer;
+}
+
+.desktopOnly {
+  display: flex;
+}
+
+/* DRAWER */
+.drawerOverlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 998;
+}
+
+.mobileDrawer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 280px;
+  height: 100vh;
+  background: linear-gradient(135deg, #2874f0, #003cb3);
+  color: white;
+  z-index: 999;
+  padding: 20px;
+}
+
+.drawerHeader {
+  display: flex;
+  justify-content: space-between;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.drawerSearch {
+  background: white;
+  padding: 10px;
+  border-radius: 10px;
+  display: flex;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+
+.drawerSearch input {
+  border: none;
+  outline: none;
+  width: 100%;
+}
+
+.drawerSection h4 {
+  margin: 12px 0;
+  font-size: 14px;
+  opacity: 0.9;
+}
+
+.drawerSection div {
+  padding: 10px 0;
+  cursor: pointer;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 900px) {
+  .desktopOnly {
+    display: none;
+  }
+
+  .mobileMenuBtn {
+    display: block;
+  }
+
+  .headerContainer {
+    padding: 10px 20px;
+  }
+}

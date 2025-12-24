@@ -85,7 +85,7 @@ const Login = ({ setUser }) => {
           className="authLeftBackground"
           style={{
             backgroundImage:
-              "url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSKe2FG8-pqeScYzzWdlVHfnpb0Fg8V7Z8xKw&s')",
+              "url('https://t3.ftcdn.net/jpg/03/91/46/10/360_F_391461057_5P0BOWl4lY442Zoo9rzEeJU0S2c1WDZR.jpg')",
           }}
         />
       </div>
