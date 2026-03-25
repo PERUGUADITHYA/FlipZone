@@ -15,7 +15,7 @@
 <br/>
 
 🔗 **Live Demo**  
-👉https://peruguadithya.github.io/FlipcartLit](https://peruguadithya.github.io/FlipZone/#/login
+👉https://peruguadithya.github.io/FlipZone/#/login
 
 </div>
 
